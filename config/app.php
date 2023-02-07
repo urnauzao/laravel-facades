@@ -195,6 +195,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\MyLoggerProvider::class,
+        App\Providers\MyBestLoggerProvider::class,
 
     ],
 
@@ -212,6 +213,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'MyLogger' => App\Facades\MyLogger::class,
+        'mybestlogger' => App\Facades\MyBestLogger::class,
     ])->toArray(),
 
 ];
