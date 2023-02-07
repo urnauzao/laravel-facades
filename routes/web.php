@@ -1,5 +1,6 @@
 <?php
 
+use App\Facades\MyLogger;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    \MyLogger::error('my logger error', [1,2], 'ERROR17');
+    MyLogger::critical('my logger critical', [1,2, 8123761862, "asdas"], 'CRITICAL18');
+    return response()->json(["sucesso" => true]);
 });
